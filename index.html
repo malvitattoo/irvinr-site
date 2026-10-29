@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Irvin Rivera, UGC and short-form content creator. Bilingual English and Spanish videos that sell products and lifestyles for brands and agencies.">
+<meta property="og:title" content="Irvin Rivera">
+<meta property="og:description" content="UGC and short-form content creator. English and Spanish.">
+<meta property="og:image" content="https://www.irvinr.com/irvin.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%230f9d93%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2718%27 fill=%27white%27 text-anchor=%27middle%27%3EIR%3C/text%3E%3C/svg%3E">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Irvin Rivera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  /* Layout: light, airy, one column of generous sections separated by hairlines, the way a clean
+     portfolio template reads. One accent (lagoon teal from the Venice photo) and one characterful
+     display face carry the personality; everything else stays quiet. Light only, by Irvin's choice. */
+  :root {
+    --bg: #f7f8f8;
+    --bg-2: #ffffff;
+    --line: #dde3e4;
+    --fg: #121a1e;
+    --muted: #5e6b71;
+    --accent: #0f9d93;
+    --accent-ink: #ffffff;
+    --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Instrument Sans", "Segoe UI", Roboto, system-ui, sans-serif;
+    color-scheme: light;
+  }
+  /* Single light look by choice: the page stays light whatever the viewer's system theme. */
+  :root[data-theme="dark"] { color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* language switching: default EN, body.lang-es shows Spanish */
+  .es { display: none; }
+  body.lang-es .es { display: revert; }
+  body.lang-es .en { display: none; }
+  body.lang-es span.es { display: inline; }
+
+  .wrap {
+    max-width: 1040px; margin-inline: auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  section { padding-block: clamp(64px, 9vw, 120px); border-top: 1px solid var(--line); }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.1; font-weight: 600; letter-spacing: -0.015em; }
+  h2 { font-size: clamp(30px, 4vw, 44px); }
+  h3 { font-size: 20px; line-height: 1.3; }
+  p { margin: 0; }
+  .lede { color: var(--muted); max-width: 58ch; font-size: 18px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .sec-head { display: grid; gap: 16px; margin-bottom: 48px; max-width: 720px; }
+  .sec-head h2 { font-weight: 600; }
+
+  /* nav */
+  .nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+  .brand { font-family: var(--font-display); font-weight: 600; font-size: 17px; text-decoration: none; white-space: nowrap; }
+  .nav-links { display: flex; gap: 26px; font-size: 15px; }
+  .nav-links a { text-decoration: none; color: var(--muted); }
+  .nav-links a:hover { color: var(--fg); }
+  .lang { display: inline-flex; gap: 2px; }
+  .lang button {
+    font: 500 13px/1 var(--font-body); letter-spacing: 0.04em; border: 1px solid transparent; background: transparent; color: var(--muted);
+    padding: 7px 10px; border-radius: 999px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { color: var(--fg); border-color: var(--line); background: var(--bg-2); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* hero */
+  .hero { border-top: 0; padding-block: clamp(32px, 6vw, 80px) clamp(56px, 8vw, 110px); }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+  .hero-copy { display: grid; gap: 28px; min-width: 0; }
+  .hero .eyebrow { margin: 0; color: var(--muted); }
+  .hero h1 { font-size: clamp(42px, 6.4vw, 78px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.02; }
+  .hero h1 .accent { color: var(--accent); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer;
+    font: 500 15px/1 var(--font-body); padding: 15px 22px; border-radius: 999px; border: 1px solid transparent;
+    transition: background .15s ease, border-color .15s ease;
+  }
+  .btn-primary { background: var(--fg); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent); color: var(--accent-ink); }
+  .btn-ghost { border-color: var(--line); color: var(--fg); background: transparent; }
+  .btn-ghost:hover { border-color: var(--fg); }
+  .btn svg { width: 16px; height: 16px; }
+
+  .portrait { justify-self: end; width: min(100%, 380px); display: grid; gap: 12px; }
+  .portrait .frame { aspect-ratio: 4 / 5; max-width: 100%; border-radius: 16px; overflow: hidden; background: var(--bg-2); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; }
+  .portrait figcaption { font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .portrait { justify-self: start; width: min(100%, 320px); }
+  }
+
+  /* facts strip */
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: clamp(40px, 6vw, 72px); padding-top: 28px; border-top: 1px solid var(--line); }
+  .fact { display: grid; gap: 4px; min-width: 0; }
+  .fact b { font-family: var(--font-display); font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .fact span { color: var(--muted); font-size: 14px; }
+  @media (max-width: 720px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+
+  /* about */
+  .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+  .about-text { display: grid; gap: 20px; min-width: 0; }
+  .about-text p { max-width: 56ch; }
+  .about-text .big { font-size: 21px; line-height: 1.45; }
+  .timeline { min-width: 0; }
+  .tl { display: grid; grid-template-columns: 96px 1fr; gap: 18px; padding-block: 18px; border-top: 1px solid var(--line); }
+  .tl:last-child { border-bottom: 1px solid var(--line); }
+  .tl .when { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+  .tl.now .when { color: var(--accent); }
+  .tl .what { display: grid; gap: 3px; min-width: 0; }
+  .tl .what b { font-weight: 600; }
+  .tl .what span { color: var(--muted); font-size: 15px; }
+  @media (max-width: 860px) { .about .wrap { grid-template-columns: 1fr; } .tl { grid-template-columns: 84px 1fr; } }
+
+  /* services: a plain list */
+  .svc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(32px, 5vw, 64px); }
+  .svc { display: grid; gap: 8px; padding-block: 26px; border-top: 1px solid var(--line); min-width: 0; }
+  .svc p { color: var(--muted); font-size: 15.5px; max-width: 46ch; }
+  .svc .fmt { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-top: 4px; }
+  @media (max-width: 720px) { .svc-list { grid-template-columns: 1fr; } }
+
+  /* rates */
+  .rates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .rate { background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; padding: 30px 26px; display: grid; gap: 18px; align-content: start; min-width: 0; }
+  .rate.featured { border-color: var(--accent); }
+  .rate .model { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; display: flex; justify-content: space-between; gap: 10px; }
+  .rate .model em { font-style: normal; color: var(--accent); }
+  .rate h3 { font-size: 24px; }
+  .rate .fit { color: var(--muted); font-size: 15px; }
+  .rate ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; font-size: 15px; }
+  .rate li { display: flex; gap: 10px; align-items: flex-start; }
+  .rate li::before { content: ""; flex-shrink: 0; width: 6px; height: 6px; margin-top: 9px; border-radius: 50%; background: var(--accent); }
+  .rate .foot { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); font-weight: 600; font-size: 15px; }
+  .terms { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px clamp(32px, 5vw, 64px); }
+  .terms > div { display: grid; gap: 14px; min-width: 0; }
+  .terms h3 { font-size: 17px; }
+  .terms ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; font-size: 15px; }
+  .terms li { display: flex; gap: 10px; align-items: flex-start; }
+  .terms li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+  .terms .addons li::before { content: "+"; }
+  .budget-note { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line); display: flex; gap: 20px 40px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+  .budget-note b { font-family: var(--font-display); font-size: 19px; font-weight: 600; display: block; margin-bottom: 4px; }
+  .budget-note p { color: var(--muted); font-size: 15px; max-width: 56ch; }
+  @media (max-width: 860px) { .rates-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .terms { grid-template-columns: 1fr; } }
+
+  /* work */
+  .work-list { display: grid; }
+  .work-row {
+    text-decoration: none; display: grid; grid-template-columns: 40px 1fr auto; gap: 18px; align-items: center;
+    padding-block: 22px; border-top: 1px solid var(--line); min-width: 0;
+  }
+  .work-row:last-child { border-bottom: 1px solid var(--line); }
+  .work-row .logo { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: var(--fg); color: var(--bg); }
+  .work-row .logo svg { width: 20px; height: 20px; }
+  .work-row .meta { min-width: 0; display: grid; gap: 2px; }
+  .work-row .handle { font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+  .work-row p { color: var(--muted); font-size: 15px; }
+  .work-row .go { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .work-row:hover .go, .work-row:hover .handle { color: var(--accent); }
+  @media (max-width: 480px) { .work-row { grid-template-columns: 40px 1fr; } .work-row .go { display: none; } }
+
+  /* testimonials (hidden until quotes arrive) */
+  .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .quote { background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: grid; gap: 14px; }
+  .quote p { font-size: 17px; }
+  .quote cite { font-style: normal; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) { .quotes { grid-template-columns: 1fr; } }
+
+  /* contact */
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+  .contact-copy { display: grid; gap: 20px; }
+  .contact-copy h2 { font-size: clamp(34px, 5vw, 56px); letter-spacing: -0.03em; }
+  .contact-copy h2 .accent { color: var(--accent); }
+  .avail { display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 15px; }
+  .avail .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+  .channels { display: grid; min-width: 0; }
+  .channel { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; padding-block: 18px; border-top: 1px solid var(--line); min-width: 0; }
+  .channel:last-child { border-bottom: 1px solid var(--line); }
+  .channel .label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .channel .val { font-weight: 500; font-size: 17px; word-break: break-all; }
+  .channel .val a { text-decoration: none; }
+  .channel .val a:hover { color: var(--accent); }
+  .channel .meta { min-width: 0; display: grid; gap: 3px; }
+  .copy {
+    font: 500 13px/1 var(--font-body); border: 1px solid var(--line); background: transparent; color: var(--muted);
+    padding: 9px 13px; border-radius: 999px; cursor: pointer; white-space: nowrap;
+  }
+  .copy:hover { border-color: var(--fg); color: var(--fg); }
+  .copy.done { border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 860px) { .contact .wrap { grid-template-columns: 1fr; } }
+
+  footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Irvin Rivera</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#about"><span class="en">About</span><span class="es">Sobre mí</span></a>
+      <a href="#services"><span class="en">Services</span><span class="es">Servicios</span></a>
+      <a href="#rates"><span class="en">Rates</span><span class="es">Tarifas</span></a>
+      <a href="#work"><span class="en">Work</span><span class="es">Portafolio</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-es" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="en">UGC &amp; short-form content creator · English &amp; Spanish</span><span class="es">Creador de contenido UGC y short-form · Inglés y español</span></p>
+        <h1>
+          <span class="en">Content that makes people <span class="accent">buy.</span></span>
+          <span class="es">Contenido que hace que la gente <span class="accent">compre.</span></span>
+        </h1>
+        <p class="lede en">I'm Irvin Rivera. I create short-form video that sells products and lifestyles, in English and Spanish, for brands, agencies and anyone with something worth showing.</p>
+        <p class="lede es">Soy Irvin Rivera. Creo videos cortos que venden productos y estilos de vida, en inglés y español, para marcas, agencias y cualquiera con algo que valga la pena mostrar.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">
+            <span class="en">Let's make a video</span><span class="es">Hagamos un video</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#rates"><span class="en">See rates</span><span class="es">Ver tarifas</span></a>
+        </div>
+      </div>
+
+      <figure class="portrait" style="margin:0">
+        <div class="frame"><img src="irvin.webp" alt="Irvin Rivera on a boat in Venice, Italy" width="1086" height="1448"></div>
+        <figcaption><span>Irvin Rivera</span><span>Venezia, 2026</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact"><b>7+</b><span><span class="en">years creating content</span><span class="es">años creando contenido</span></span></div>
+        <div class="fact"><b>1+</b><span><span class="en">year specialised in UGC</span><span class="es">año especializado en UGC</span></span></div>
+        <div class="fact"><b>EN · ES</b><span><span class="en">native in both, on camera</span><span class="es">nativo en ambos, frente a cámara</span></span></div>
+        <div class="fact"><b>$10K</b><span><span class="en">Month Club, 7 Figure Affiliate</span><span class="es">Month Club, 7 Figure Affiliate</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="about-text">
+        <div class="eyebrow"><span class="en">About</span><span class="es">Sobre mí</span></div>
+        <h2><span class="en">Seven years of reading what people want to watch.</span><span class="es">Siete años leyendo lo que la gente quiere ver.</span></h2>
+        <p class="big en">I started creating on Instagram seven years ago. For the last year I've focused entirely on UGC: short, honest videos that promote products and convert sales.</p>
+        <p class="big es">Empecé a crear contenido en Instagram hace siete años. Desde hace más de un año me dedico por completo al UGC: videos cortos y honestos que promocionan productos y convierten ventas.</p>
+        <p class="en">Before content creation, I was a tattoo artist. That's where the eye for composition and the habit of making something people keep come from. I also spent years working in nightlife, which taught me how trends move between different social circles long before they show up in a feed.</p>
+        <p class="es">Antes de crear contenido, fui tatuador. De ahí viene el ojo para la composición y la costumbre de crear algo que la gente conserva. También trabajé varios años en la vida nocturna, donde aprendí cómo las tendencias se mueven entre distintos círculos sociales mucho antes de aparecer en un feed.</p>
+        <p class="en">Today I'm a member of the 7 Figure Affiliate agency and work with brands on monthly flat-fee video deals and commission-based campaigns. I shoot and edit in English and Spanish, so we can reach double the audience and demographic.</p>
+        <p class="es">Hoy formo parte de la agencia 7 Figure Affiliate y trabajo con marcas en acuerdos mensuales por video y campañas por comisión. Grabo y edito en inglés y español, así que podemos llegar al doble de audiencia y demografía.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl">
+          <div class="when"><span class="en">Earlier</span><span class="es">Antes</span></div>
+          <div class="what"><b><span class="en">Tattoo artist</span><span class="es">Tatuador</span></b><span><span class="en">Composition, detail, and work people choose to keep.</span><span class="es">Composición, detalle y obras que la gente elige conservar.</span></span></div>
+        </div>
+        <div class="tl">
+          <div class="when"><span class="en">Earlier</span><span class="es">Antes</span></div>
+          <div class="what"><b><span class="en">Nightlife industry</span><span class="es">Vida nocturna</span></b><span><span class="en">Years on the floor, reading trends across social layers.</span><span class="es">Años en pista, leyendo tendencias entre capas sociales.</span></span></div>
+        </div>
+        <div class="tl">
+          <div class="when">7 <span class="en">yrs ago</span><span class="es">años</span></div>
+          <div class="what"><b><span class="en">Started creating on Instagram</span><span class="es">Empecé a crear en Instagram</span></b><span><span class="en">Lifestyle content, built an audience from zero.</span><span class="es">Contenido lifestyle, una audiencia construida desde cero.</span></span></div>
+        </div>
+        <div class="tl">
+          <div class="when">1+ <span class="en">yr ago</span><span class="es">año</span></div>
+          <div class="what"><b><span class="en">Full focus on UGC</span><span class="es">Enfoque total en UGC</span></b><span><span class="en">Product-led short-form video for brands.</span><span class="es">Video corto centrado en producto para marcas.</span></span></div>
+        </div>
+        <div class="tl now">
+          <div class="when"><span class="en">Now</span><span class="es">Hoy</span></div>
+          <div class="what"><b>7 Figure Affiliate</b><span><span class="en">Agency member. Monthly flat-fee brand deals and commission campaigns. "10K Month Club" award for over $10,000 generated in a single month.</span><span class="es">Miembro de la agencia. Acuerdos mensuales con marcas y campañas por comisión. Premio "10K Month Club" por más de $10,000 generados en un solo mes.</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span class="en">Services</span><span class="es">Servicios</span></div>
+        <h2><span class="en">Everything a product needs to show up on a feed and sell.</span><span class="es">Todo lo que un producto necesita para aparecer en un feed y vender.</span></h2>
+        <p class="lede en">Vertical, hook-first, made for TikTok, Reels and Shorts. Delivered in English, Spanish, or both.</p>
+        <p class="lede es">Vertical, con gancho desde el primer segundo, hecho para TikTok, Reels y Shorts. Entregado en inglés, español o ambos.</p>
+      </div>
+      <div class="svc-list">
+        <div class="svc">
+          <h3><span class="en">UGC videos</span><span class="es">Videos UGC</span></h3>
+          <p class="en">Authentic creator-style videos your brand owns and runs on its own channels or as ads. Unboxings, demos, testimonials, day-in-the-life.</p>
+          <p class="es">Videos auténticos estilo creador que tu marca posee y publica en sus canales o como anuncios. Unboxings, demos, testimonios, un día en mi vida.</p>
+          <span class="fmt">9:16 · 15–60s</span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Short-form content</span><span class="es">Contenido short-form</span></h3>
+          <p class="en">Scripted and edited for the first three seconds. Trend-aware formats for TikTok, Instagram Reels and YouTube Shorts.</p>
+          <p class="es">Con guion y edición pensados para los primeros tres segundos. Formatos en tendencia para TikTok, Instagram Reels y YouTube Shorts.</p>
+          <span class="fmt">TikTok · Reels · Shorts</span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Lifestyle content</span><span class="es">Contenido lifestyle</span></h3>
+          <p class="en">Travel, fitness, fashion, food, nightlife. The product lives inside a real routine instead of a studio.</p>
+          <p class="es">Viajes, fitness, moda, comida, vida nocturna. El producto vive dentro de una rutina real, no en un estudio.</p>
+          <span class="fmt"><span class="en">On location</span><span class="es">En locación</span></span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Product promotion &amp; reviews</span><span class="es">Promoción y reseñas de producto</span></h3>
+          <p class="en">Honest, feature-by-feature reviews and comparisons that answer the questions people ask before they buy.</p>
+          <p class="es">Reseñas y comparativas honestas, función por función, que responden las preguntas que la gente se hace antes de comprar.</p>
+          <span class="fmt"><span class="en">Product specialist</span><span class="es">Especialista en producto</span></span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Affiliate &amp; commission campaigns</span><span class="es">Campañas de afiliado y comisión</span></h3>
+          <p class="en">Performance-based content on TikTok Shop and affiliate programs. I get paid when the product sells, so I make videos that sell.</p>
+          <p class="es">Contenido basado en resultados en TikTok Shop y programas de afiliados. Cobro cuando el producto se vende, así que hago videos que venden.</p>
+          <span class="fmt">TikTok Shop · Affiliate</span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Marketing strategy consultations</span><span class="es">Consultoría de estrategia de marketing</span></h3>
+          <p class="en">What to post, how often, in which language, and which creators to work with. One call, a clear plan.</p>
+          <p class="es">Qué publicar, con qué frecuencia, en qué idioma y con qué creadores trabajar. Una llamada, un plan claro.</p>
+          <span class="fmt"><span class="en">Brands &amp; agencies</span><span class="es">Marcas y agencias</span></span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Bilingual versions</span><span class="es">Versiones bilingües</span></h3>
+          <p class="en">You pick your preferred language. Native English, Spanish, or Spanglish. Double your demographic target audience.</p>
+          <p class="es">Tú eliges el idioma. Inglés nativo, español o Spanglish. Duplica tu público objetivo.</p>
+          <span class="fmt">EN · ES · Spanglish</span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Ad-ready creatives</span><span class="es">Creativos listos para anuncios</span></h3>
+          <p class="en">Multiple hooks and cuts of the same video so your team can test what converts. Spark Ads codes and whitelisting available.</p>
+          <p class="es">Varios ganchos y cortes del mismo video para que tu equipo pruebe qué convierte. Códigos de Spark Ads y whitelisting disponibles.</p>
+          <span class="fmt">Paid social</span>
+        </div>
+        <div class="svc">
+          <h3><span class="en">Influencer collaborations</span><span class="es">Colaboraciones como influencer</span></h3>
+          <p class="en">Posted on my own TikTok and Instagram when the product fits my audience. Ask me about it.</p>
+          <p class="es">Publicado en mi propio TikTok e Instagram cuando el producto encaja con mi audiencia. Pregúntame.</p>
+          <span class="fmt"><span class="en">On request</span><span class="es">A pedido</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rates" class="rates">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span class="en">Rates</span><span class="es">Tarifas</span></div>
+        <h2><span class="en">Three ways to work together. Pick the one that fits your budget.</span><span class="es">Tres formas de trabajar juntos. Elige la que encaje con tu presupuesto.</span></h2>
+        <p class="lede en">Rates are flexible and scale with scope, usage and volume. Tell me what you're launching and I'll send a quote the same day.</p>
+        <p class="lede es">Las tarifas son flexibles y dependen del alcance, el uso y el volumen. Cuéntame qué vas a lanzar y te envío una cotización el mismo día.</p>
+      </div>
+
+      <div class="rates-grid">
+        <div class="rate">
+          <div class="model"><span><span class="en">Model 01</span><span class="es">Modelo 01</span></span></div>
+          <h3><span class="en">Flat fee per video</span><span class="es">Tarifa fija por video</span></h3>
+          <p class="fit en">Best for a single launch, a test, or a brand that wants content to run on its own channels.</p>
+          <p class="fit es">Ideal para un lanzamiento puntual, una prueba o una marca que quiere contenido para sus propios canales.</p>
+          <ul>
+            <li><span class="en">One finished 9:16 video, 15–60 seconds</span><span class="es">Un video 9:16 terminado, de 15 a 60 segundos</span></li>
+            <li><span class="en">Concept, filming, editing and captions</span><span class="es">Concepto, grabación, edición y subtítulos</span></li>
+            <li><span class="en">1-year usage rights included</span><span class="es">Derechos de uso por 1 año incluidos</span></li>
+            <li><span class="en">Spanish or Spanglish version as an add-on</span><span class="es">Versión en español o Spanglish como extra</span></li>
+          </ul>
+          <div class="foot"><span class="en">Priced per video</span><span class="es">Precio por video</span></div>
+        </div>
+
+        <div class="rate featured">
+          <div class="model"><span><span class="en">Model 02</span><span class="es">Modelo 02</span></span><em><span class="en">Most popular</span><span class="es">Más popular</span></em></div>
+          <h3><span class="en">Package deals</span><span class="es">Paquetes</span></h3>
+          <p class="fit en">Best for brands that post every week. Monthly bundles of videos at a lower per-video rate.</p>
+          <p class="fit es">Ideal para marcas que publican cada semana. Paquetes mensuales de videos con un precio por video más bajo.</p>
+          <ul>
+            <li><span class="en">Bundles of 4, 8 or 12 videos per month</span><span class="es">Paquetes de 4, 8 o 12 videos al mes</span></li>
+            <li><span class="en">Multiple hooks and cuts of each concept</span><span class="es">Varios ganchos y cortes de cada concepto</span></li>
+            <li><span class="en">Bilingual delivery included</span><span class="es">Entrega bilingüe incluida</span></li>
+            <li><span class="en">Priority turnaround and a monthly strategy call</span><span class="es">Entrega prioritaria y una llamada de estrategia mensual</span></li>
+          </ul>
+          <div class="foot"><span class="en">Monthly flat fee</span><span class="es">Tarifa mensual fija</span></div>
+        </div>
+
+        <div class="rate">
+          <div class="model"><span><span class="en">Model 03</span><span class="es">Modelo 03</span></span></div>
+          <h3><span class="en">Commission-based</span><span class="es">Por comisión</span></h3>
+          <p class="fit en">Best for products on TikTok Shop or with an affiliate program. Low upfront cost, I earn when you sell.</p>
+          <p class="fit es">Ideal para productos en TikTok Shop o con programa de afiliados. Costo inicial bajo, yo gano cuando tú vendes.</p>
+          <ul>
+            <li><span class="en">Percentage of sales generated through my content</span><span class="es">Porcentaje de las ventas generadas por mi contenido</span></li>
+            <li><span class="en">Videos posted on my channels and shared for yours</span><span class="es">Videos publicados en mis canales y compartidos para los tuyos</span></li>
+            <li><span class="en">Hybrid option: small base fee plus commission</span><span class="es">Opción híbrida: tarifa base pequeña más comisión</span></li>
+            <li><span class="en">Product samples provided by the brand</span><span class="es">Muestras del producto a cargo de la marca</span></li>
+          </ul>
+          <div class="foot"><span class="en">% of sales</span><span class="es">% de ventas</span></div>
+        </div>
+      </div>
+
+      <div class="terms">
+        <div>
+          <h3><span class="en">Every video includes</span><span class="es">Cada video incluye</span></h3>
+          <ul>
+            <li><span class="en">A hook written for the first 3 seconds</span><span class="es">Un gancho escrito para los primeros 3 segundos</span></li>
+            <li><span class="en">Filming on location or at home</span><span class="es">Grabación en locación o en casa</span></li>
+            <li><span class="en">Editing, music and on-screen captions</span><span class="es">Edición, música y subtítulos en pantalla</span></li>
+            <li><span class="en">One round of revisions</span><span class="es">Una ronda de revisiones</span></li>
+            <li><span class="en">1-year usage rights</span><span class="es">Derechos de uso por 1 año</span></li>
+            <li><span class="en">Delivery in 5–7 days from receiving the product</span><span class="es">Entrega en 5–7 días desde que recibo el producto</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3><span class="en">Add-ons, quoted separately</span><span class="es">Extras, cotizados aparte</span></h3>
+          <ul class="addons">
+            <li><span class="en">Ad codes (Spark Ads, whitelisting): separate fee</span><span class="es">Códigos de anuncio (Spark Ads, whitelisting): tarifa aparte</span></li>
+            <li><span class="en">Raw footage ownership: additional fee</span><span class="es">Propiedad del material sin editar: tarifa adicional</span></li>
+            <li><span class="en">Extended or perpetual usage rights</span><span class="es">Derechos de uso extendidos o perpetuos</span></li>
+            <li><span class="en">Second-language version of the same video</span><span class="es">Versión del mismo video en el segundo idioma</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="budget-note">
+        <div>
+          <b><span class="en">Working with a smaller budget?</span><span class="es">¿Tienes un presupuesto más pequeño?</span></b>
+          <p class="en">Rates are flexible for every budget, from a first-time seller to an agency roster. Say what you can invest and I'll build the format around it.</p>
+          <p class="es">Las tarifas se adaptan a cualquier presupuesto, desde un vendedor que empieza hasta una agencia. Dime cuánto puedes invertir y armo el formato a tu medida.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact"><span class="en">Get a quote</span><span class="es">Pedir cotización</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span class="en">Work</span><span class="es">Portafolio</span></div>
+        <h2><span class="en">The portfolio is live, where you'd watch it anyway.</span><span class="es">El portafolio está en vivo, justo donde lo verías de todos modos.</span></h2>
+        <p class="lede en">Open either channel to see current brand deals, lifestyle content and what's trending this week.</p>
+        <p class="lede es">Abre cualquiera de los dos canales para ver colaboraciones actuales, contenido lifestyle y lo que es tendencia esta semana.</p>
+      </div>
+      <div class="work-list">
+        <a class="work-row" href="https://www.tiktok.com/@irvinsdeals" target="_blank" rel="noopener">
+          <div class="logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.3 1.7 3.8 4 4v3.1c-1.5 0-2.9-.5-4-1.3v6.4a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.2a2.6 2.6 0 1 0 1.7 2.4V3h3.1z"/></svg></div>
+          <div class="meta"><span class="handle">@irvinsdeals</span><p class="en">TikTok. Product deals, reviews and affiliate content.</p><p class="es">TikTok. Ofertas, reseñas y contenido de afiliado.</p></div>
+          <span class="go"><span class="en">Watch on TikTok</span><span class="es">Ver en TikTok</span> ↗</span>
+        </a>
+        <a class="work-row" href="https://www.instagram.com/irvin.rivera_" target="_blank" rel="noopener">
+          <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <div class="meta"><span class="handle">@irvin.rivera_</span><p class="en">Instagram. Lifestyle, travel and brand collaborations.</p><p class="es">Instagram. Lifestyle, viajes y colaboraciones con marcas.</p></div>
+          <span class="go"><span class="en">Watch on Instagram</span><span class="es">Ver en Instagram</span> ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client testimonials: remove the `hidden` attribute below and replace the two example quotes once real ones arrive. -->
+  <section id="testimonials" hidden>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span class="en">Clients</span><span class="es">Clientes</span></div>
+        <h2><span class="en">What brands say after the first video.</span><span class="es">Lo que dicen las marcas después del primer video.</span></h2>
+      </div>
+      <div class="quotes">
+        <div class="quote"><p>"[Client quote goes here.]"</p><cite>[Name, Brand]</cite></div>
+        <div class="quote"><p>"[Client quote goes here.]"</p><cite>[Name, Brand]</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="contact-copy">
+        <div class="eyebrow"><span class="en">Contact</span><span class="es">Contacto</span></div>
+        <h2><span class="en">Anywhere. Any time. <span class="accent">Let's shoot.</span></span><span class="es">Donde sea. A cualquier hora. <span class="accent">Grabemos.</span></span></h2>
+        <p class="lede en">No fixed territory. If the product and the budget are right, I'll travel. Message me in English or Spanish and you'll hear back fast.</p>
+        <p class="lede es">Sin territorio fijo. Si el producto y el presupuesto encajan, viajo. Escríbeme en inglés o español y te respondo rápido.</p>
+        <div class="avail"><span class="dot"></span><span class="en">Currently booking new brand deals</span><span class="es">Aceptando nuevas colaboraciones con marcas</span></div>
+      </div>
+
+      <div class="channels">
+        <div class="channel">
+          <div class="meta"><span class="label">Email</span><span class="val"><a href="mailto:irvriv00@gmail.com">irvriv00@gmail.com</a></span></div>
+          <button type="button" class="copy" data-copy="irvriv00@gmail.com"><span class="en">Copy</span><span class="es">Copiar</span></button>
+        </div>
+        <div class="channel">
+          <div class="meta"><span class="label">WhatsApp / <span class="en">Phone</span><span class="es">Teléfono</span></span><span class="val"><a href="https://wa.me/13176589987" target="_blank" rel="noopener">+1 (317) 658-9987</a></span></div>
+          <button type="button" class="copy" data-copy="+13176589987"><span class="en">Copy</span><span class="es">Copiar</span></button>
+        </div>
+        <div class="channel">
+          <div class="meta"><span class="label">Instagram</span><span class="val"><a href="https://www.instagram.com/irvin.rivera_" target="_blank" rel="noopener">@irvin.rivera_</a></span></div>
+          <button type="button" class="copy" data-copy="@irvin.rivera_"><span class="en">Copy</span><span class="es">Copiar</span></button>
+        </div>
+        <div class="channel">
+          <div class="meta"><span class="label">TikTok</span><span class="val"><a href="https://www.tiktok.com/@irvinsdeals" target="_blank" rel="noopener">@irvinsdeals</a></span></div>
+          <button type="button" class="copy" data-copy="@irvinsdeals"><span class="en">Copy</span><span class="es">Copiar</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Irvin Rivera · <span class="en">UGC &amp; short-form content creator</span><span class="es">Creador de contenido UGC y short-form</span></span>
+    <span>irvinr.com · © <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var body = document.body;
+    var buttons = document.querySelectorAll('.lang button');
+
+    function setLang(lang) {
+      body.classList.toggle('lang-es', lang === 'es');
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+      try { localStorage.setItem('irvin-lang', lang); } catch (e) {}
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.dataset.lang); });
+    });
+
+    var saved = null;
+    try { saved = localStorage.getItem('irvin-lang'); } catch (e) {}
+    if (!saved && /^es\b/i.test(navigator.language || '')) saved = 'es';
+    if (saved === 'es') setLang('es');
+
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.dataset.copy;
+        var done = function () {
+          btn.classList.add('done');
+          var en = btn.querySelector('.en'), es = btn.querySelector('.es');
+          var prevEn = en.textContent, prevEs = es.textContent;
+          en.textContent = 'Copied'; es.textContent = 'Copiado';
+          setTimeout(function () { btn.classList.remove('done'); en.textContent = prevEn; es.textContent = prevEs; }, 1600);
+        };
+        var fallback = function () {
+          var val = btn.closest('.channel').querySelector('.val');
+          var range = document.createRange(); range.selectNodeContents(val);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else { fallback(); }
+      });
+    });
+
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+  })();
+</script>
+</body>
+</html>
